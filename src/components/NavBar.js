@@ -1,12 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';  // Use NavLink for active links
-import { getFavorites } from '../utils/localStorage';
 import { IonIcon } from '@ionic/react';
 import { home, heart } from 'ionicons/icons';
 import '../styles/NavBar.scss';
 
 const NavBar = () => {
-
   return (
     <nav className="navbar">
       <div className="navbar-tabs">
