@@ -1,0 +1,151 @@
+.movie-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  padding-bottom: 100px;  /* Added bottom padding */
+  width: 100%;  /* Make sure it takes full width */
+  background-color: white; /* Ensure the background is white */
+  box-sizing: border-box; /* Include padding in the width calculation */
+  margin: 0;  /* Remove any automatic margins */
+  position: relative; /* To position the banner inside this container */
+
+  .movie-detail__poster {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: none; /* Removed the hover transition */
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  p {
+    margin: 10px 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: center;
+    max-width: 600px;
+  }
+
+  .movie-detail__release,
+  .movie-detail__rating {
+    font-weight: bold;
+  }
+
+  button {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #e5533d;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  /* Favorite Heart Icon Styles */
+  .movie-detail__favorite {
+    margin-top: 15px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, fill 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1); /* Slightly enlarge on hover */
+    }
+
+    &.is-favorite {
+      color: red; /* Red color when favorite */
+    }
+
+    svg {
+      transition: fill 0.3s ease; /* Smooth transition for color change */
+    }
+
+    svg:hover {
+      fill: red; /* Turn heart red on hover */
+    }
+
+    svg:active {
+      fill: red; /* Keep heart red when clicked */
+    }
+  }
+
+  /* Banner Styles */
+  .movie-detail__banner {
+    position: absolute; /* Position it over the content */
+    top: 500px; /* Adjust to the desired space from the top */
+    left: 50%;
+    transform: translateX(-50%); /* Center it horizontally */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    z-index: 10; /* Ensure it is on top of other elements */
+  }
+
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .movie-detail {
+      padding: 15px;
+
+      .movie-detail__poster {
+        max-width: 250px;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 0.9rem;
+        max-width: 100%;
+      }
+
+      button {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .movie-detail {
+      padding: 10px;
+
+      .movie-detail__poster {
+        max-width: 200px;
+      }
+
+      h1 {
+        font-size: 1.2rem;
+      }
+
+      p {
+        font-size: 0.85rem;
+        text-align: justify;
+      }
+
+      button {
+        padding: 8px 12px;
+        font-size: 0.85rem;
+      }
+    }
+  }
+}

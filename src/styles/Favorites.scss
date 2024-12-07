@@ -1,0 +1,30 @@
+/* Ensure the page doesn't overflow horizontally */
+html, body {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  width: 100%; /* Ensure the body takes the full width */
+}
+
+.favorites {
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  
+    .movie-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px; /* Adjust gap between cards */
+    }
+  
+    .movie-card {  /* Assuming MovieCard has this class */
+      margin-bottom: 55px; /* Add margin at the bottom to push the card upward */
+    }
+  
+    p {
+      text-align: center;
+      font-size: 1.2rem;
+      color: #555;
+    }
+  }
+  

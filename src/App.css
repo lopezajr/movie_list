@@ -1,0 +1,51 @@
+/* src/App.css */
+
+.search-bar {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar input {
+  padding: 10px;
+  width: 300px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.movie-card {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.movie-card img {
+  width: 200px;
+  height: 300px;
+}
+
+.movie-card button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.movie-card button:hover {
+  background-color: #0056b3;
+}
+
+.navbar {
+  padding: 10px;
+  background-color: #333;
+  color: white;
+}
+
+.navbar a {
+  color: white;
+  margin-right: 20px;
+  text-decoration: none;
+}

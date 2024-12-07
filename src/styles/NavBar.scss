@@ -1,0 +1,114 @@
+.navbar {
+  position: fixed; /* Fix the navbar to the bottom of the screen */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+
+  .navbar-tabs {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0;
+
+    .navbar-tab {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: #333;
+      font-size: 14px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: #007bff; /* Change color on hover */
+      }
+
+      svg {
+        font-size: 24px;
+        margin-bottom: 5px;
+      }
+
+      span {
+        font-size: 12px;
+        text-align: center;
+      }
+    }
+
+    /* Active tab styles */
+    .active-tab {
+      color: #007bff; /* Blue color when active */
+      font-weight: bold; /* Bold text to highlight the active tab */
+      svg {
+        color: #007bff; /* Icon color for active tab */
+      }
+    }
+  }
+
+  /* Mobile view adjustments */
+  @media (max-width: 768px) {
+    padding: 12px 0; /* Increase padding for mobile to add height */
+
+    .navbar-tabs {
+      .navbar-tab {
+        font-size: 12px;
+
+        svg {
+          font-size: 20px;
+        }
+
+        span {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+
+  /* Very small screens adjustments (like mobile portrait mode) */
+  @media (max-width: 480px) {
+    padding: 16px 0; /* Increase padding further for more height on very small screens */
+
+    .navbar-tabs {
+      .navbar-tab {
+        font-size: 11px;
+
+        svg {
+          font-size: 18px;
+        }
+
+        span {
+          font-size: 9px;
+        }
+      }
+    }
+  }
+
+  /* Extra small screens (e.g., smaller devices or narrow mobile screens) */
+  @media (max-width: 320px) {
+    padding: 18px 0; /* Further increase padding for extra small screens */
+
+    .navbar-tabs {
+      .navbar-tab {
+        font-size: 10px;
+
+        svg {
+          font-size: 16px;
+        }
+
+        span {
+          font-size: 8px;
+        }
+      }
+    }
+  }
+}
+
+/* Prevent content from being hidden behind the navbar */
+body {
+  padding-bottom: 50px; /* Adjust this value to match the height of your navbar */
+}
